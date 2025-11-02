@@ -1,0 +1,199 @@
+:root {
+  --orange: #EC265F;
+  --orange-light: #ec507d;
+  --yellow: #f8789c;
+  --blue-light: #000000;
+  --blue: #004834;
+}
+
+.bar {
+  display: flex;
+  margin: 30px auto; 
+  width: 400px;
+  max-width: calc(100% - 40px); 
+  justify-content: center;
+  position: relative;
+}
+
+.bar-input {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.bar-view {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+  z-index: 2;
+}
+
+
+.bar-view:not(:last-child)::before {
+  content: '';
+  width: calc(100% - 36px); 
+  position: absolute;
+  left: calc(50% + 18px); 
+  height: 8px; 
+  top: calc(50% - 4px); 
+  background: var(--blue);
+  z-index: 1;
+}
+
+
+.bar-view.completed:not(:last-child)::after {
+  content: '';
+  width: calc(100% - 36px); 
+  height: 4px; 
+  position: absolute;
+  left: calc(50% + 18px); 
+  top: calc(50% - 2px); 
+  background: var(--orange-light);
+  z-index: 1;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+
+.bar-view.current:not(:last-child)::after {
+  content: '';
+  width: calc(100% - 36px); 
+  height: 4px; 
+  position: absolute;
+  left: calc(50% + 18px); 
+  top: calc(50% - 2px); 
+  background: var(--orange-light);
+  z-index: 1;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+
+.bar-view.current ~ .bar-view:not(:last-child)::after {
+  content: '';
+  width: calc(100% - 36px); 
+  height: 4px; 
+  position: absolute;
+  left: calc(50% + 18px); 
+  top: calc(50% - 2px); 
+  background: var(--orange-light);
+  z-index: 1;
+  transform: scaleX(1);
+}
+
+.bar-button {
+  display: block;
+  width: 40px; 
+  height: 40px; 
+  margin: auto;
+  border-radius: 50%;
+  border: 4px solid var(--blue); 
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3), 3px 3px 10px rgba(0, 0, 0, 0.1); 
+  background: transparent;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+
+.bar-view.completed .bar-button::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, var(--yellow), var(--orange));
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+
+.bar-view.current .bar-button::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, var(--yellow), var(--orange));
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+
+.bar-view.current .bar-button::after {
+  content: '';
+  border: 10px solid transparent; 
+  border-top-color: var(--blue-light);
+  position: absolute;
+  bottom: calc(100% + 12px); 
+  left: calc(50% - 10px); 
+  opacity: 1;
+  animation: bouncing 0.6s cubic-bezier(0, 0, 0.74, 1.04) infinite;
+}
+
+.bar-button:hover::after {
+  transform: none;
+  opacity: 1;
+}
+
+.command {
+  font-family: 'Ubuntu Mono', monospace;
+  letter-spacing: 1px;
+  margin: 40px auto auto; 
+  animation: fade 1s ease infinite;
+  color: white;
+  text-align: center;
+  font-size: 1rem; 
+}
+
+@keyframes bouncing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px); 
+  }
+}
+
+@keyframes fade {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .bar {
+    width: 350px; 
+  }
+  
+  .bar-button {
+    width: 35px; 
+    height: 35px; 
+  }
+  
+  .bar-view:not(:last-child)::before {
+    width: calc(100% - 32px);
+    left: calc(50% + 16px);
+    height: 7px;
+    top: calc(50% - 3.5px);
+  }
+  
+  .bar-view.completed:not(:last-child)::after,
+  .bar-view.current:not(:last-child)::after,
+  .bar-view.current ~ .bar-view:not(:last-child)::after {
+    width: calc(100% - 32px);
+    left: calc(50% + 16px);
+    height: 3px;
+    top: calc(50% - 1.5px);
+  }
+}

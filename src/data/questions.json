@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "question": "What is the capital of Japan?",
+      "options": ["Tokyo", "Osaka", "Kyoto", "Nagoya"],
+      "correctAnswer": "Tokyo",
+      "explanation": "Tokyo has been the capital of Japan since 1868 and is the country's political and economic center."
+    },
+    {
+      "question": "What does 'こんにちは' mean?",
+      "options": ["Good morning", "Hello", "GoodBye", "Good evening"],
+      "correctAnswer": "Hello",
+      "explanation": "こんにちは (Konnichiwa) is a common Japanese greeting meaning 'Hello' used during the daytime."
+    },
+    {
+      "question": "Which of these means 'mountain'?",
+      "options": [
+        "かわ",
+        "やま",
+        "うみ",
+        "もり"
+      ],
+      "correctAnswer": "やま",
+      "explanation": "やま (yama) means mountain in Japanese."
+    },
+    {
+      "question": "Which particle indicates the subject of a sentence?",
+      "options": ["は", "を", "に", "で"],
+      "correctAnswer": "は",
+      "explanation": "The particle 'は' (wa) is used to indicate the subject or topic of a sentence."
+    },
+    {
+      "question": "How do you say 'Thank you' in Japanese?",
+      "options": ["すみません", "ありがとう", "お願いします", "どうぞ"],
+      "correctAnswer": "ありがとう",
+      "explanation": "ありがとう (Arigatou) means 'Thank you' in Japanese."
+    }
+  ]
+}

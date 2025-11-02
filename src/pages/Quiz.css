@@ -1,0 +1,110 @@
+.home-icon-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-icon-container:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.home-icon {
+  color: white;
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+.home-icon-container:hover .home-icon {
+  color: #26ECB4;
+}
+
+.quiz-page {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #EC265F 0%, #26ECB4 50%, #EC265F 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.quiz-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.quiz-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.command {
+  font-family: 'Ubuntu Mono', monospace;
+  letter-spacing: 1px;
+  margin: 10px auto 0;
+  animation: fade 1s ease infinite;
+  color: white;
+  font-size: 0.9rem;
+}
+
+@keyframes fade {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 1rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

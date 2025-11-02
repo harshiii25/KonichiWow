@@ -1,0 +1,65 @@
+:root {
+  --primary-pink: #EC265F;
+  --primary-teal: #26ECB4;
+  --dark-bg: #060010;
+  --card-bg: #1a1a2e;
+  --text-light: #ffffff;
+  --text-muted: #a0a0a0;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary-pink), var(--primary-teal));
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(236, 38, 95, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--primary-teal);
+  color: var(--primary-teal);
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-teal);
+  color: var(--dark-bg);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}

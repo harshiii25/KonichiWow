@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+
+.home-page {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(135deg, #EC265F 0%, #26ECB4 50%, #EC265F 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  transform: translateY(50vh);
+  margin-top: -840px;
+}
+
+.hand-container {
+  position: relative;
+  z-index: 20;
+  margin-bottom: -237px;
+}
+
+.hand-image {
+  width: 850px;
+  max-width: 90vw;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.text-container {
+  background-color: #000000;
+  padding: 3rem 4rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 10;
+  max-width: 90vw;
+}
+
+.shuffle-parent {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  font-family: "Holtwood One SC", system-ui !important;
+  letter-spacing: 8px !important;
+}
+
+/* Gallery Section */
+.gallery-section {
+  background: linear-gradient(135deg, #EC265F 0%, #26ECB4 50%, #EC265F 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.gallery-heading {
+  font-family: "Holtwood One SC", system-ui;
+  font-weight: 400;
+  font-size: 5.5rem;
+  color: #ffffff;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  padding: 0;
+  text-align: center;
+}
+
+.gallery-heading2 {
+  font-family: "Holtwood One SC", system-ui;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: -20px;
+  padding: 0;
+  text-align: center;
+}
+
+.circular-gallery {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  margin-top: -70px;
+}
+
+.circular-gallery:active {
+  cursor: grabbing;
+}
+
+/* ScrollFloat Section */
+.scroll-float-section {
+  background: linear-gradient(135deg, #EC265F 0%, #26ECB4 50%, #EC265F 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.scroll-float-container {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.scroll-float-text-custom {
+  color: #ffffff !important;
+  font-family: "Holtwood One SC", system-ui;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Large Tablets and Small Desktops (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .hand-image {
+    width: 650px;
+  }
+  
+  .content-overlay {
+    margin-top: -640px;
+  }
+  
+  .hand-container {
+    margin-bottom: -180px;
+  }
+  
+  .text-container {
+    padding: 2.5rem 3rem;
+  }
+  
+  .gallery-heading {
+    font-size: 4.5rem;
+  }
+  
+  .gallery-heading2 {
+    font-size: 3rem;
+  }
+}
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .hand-image {
+    width: 500px;
+  }
+  
+  .content-overlay {
+    margin-top: -500px;
+    transform: translateY(40vh);
+  }
+  
+  .hand-container {
+    margin-bottom: -140px;
+  }
+  
+  .text-container {
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+  }
+  
+  .shuffle-parent {
+    letter-spacing: 6px !important;
+  }
+  
+  .gallery-heading {
+    font-size: 3.5rem;
+    margin-top: 20px;
+  }
+  
+  .gallery-heading2 {
+    font-size: 2.5rem;
+  }
+  
+  .gallery-section {
+    min-height: 500px;
+    gap: 1.5rem;
+  }
+  
+  .circular-gallery {
+    margin-top: -50px;
+  }
+  
+  .scroll-float-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Mobile Landscape (640px and below) */
+@media screen and (max-width: 640px) {
+  .hand-image {
+    width: 400px;
+  }
+  
+  .content-overlay {
+    margin-top: -400px;
+    transform: translateY(35vh);
+  }
+  
+  .hand-container {
+    margin-bottom: -110px;
+  }
+  
+  .text-container {
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+  }
+  
+  .shuffle-parent {
+    letter-spacing: 4px !important;
+  }
+  
+  .gallery-heading {
+    font-size: 2.8rem;
+  }
+  
+  .gallery-heading2 {
+    font-size: 2rem;
+  }
+  
+  .gallery-section {
+    min-height: 450px;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media screen and (max-width: 480px) {
+  .hand-image {
+    width: 320px;
+  }
+  
+  .content-overlay {
+    margin-top: -320px;
+    transform: translateY(30vh);
+    padding: 0 0.5rem;
+  }
+  
+  .hand-container {
+    margin-bottom: -90px;
+  }
+  
+  .text-container {
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .shuffle-parent {
+    letter-spacing: 3px !important;
+  }
+  
+  .gallery-heading {
+    font-size: 2.2rem;
+    margin-top: 10px;
+  }
+  
+  .gallery-heading2 {
+    font-size: 1.6rem;
+    margin-top: -10px;
+  }
+  
+  .gallery-section {
+    min-height: 400px;
+    gap: 1rem;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .circular-gallery {
+    margin-top: -40px;
+  }
+  
+  .scroll-float-section {
+    padding: 2rem 1rem;
+    min-height: 80vh;
+  }
+  
+  .scroll-float-container {
+    gap: 1.5rem;
+  }
+}
+
+/* Small Mobile (360px and below) */
+@media screen and (max-width: 360px) {
+  .hand-image {
+    width: 280px;
+  }
+  
+  .content-overlay {
+    margin-top: -280px;
+    transform: translateY(25vh);
+  }
+  
+  .hand-container {
+    margin-bottom: -75px;
+  }
+  
+  .text-container {
+    padding: 1rem 1.25rem;
+  }
+  
+  .shuffle-parent {
+    letter-spacing: 2px !important;
+  }
+  
+  .gallery-heading {
+    font-size: 1.8rem;
+  }
+  
+  .gallery-heading2 {
+    font-size: 1.4rem;
+  }
+  
+  .gallery-section {
+    min-height: 350px;
+  }
+}
+
+/* Extra Small Mobile (320px and below) */
+@media screen and (max-width: 320px) {
+  .hand-image {
+    width: 260px;
+  }
+  
+  .content-overlay {
+    margin-top: -260px;
+  }
+  
+  .hand-container {
+    margin-bottom: -65px;
+  }
+  
+  .text-container {
+    padding: 0.875rem 1rem;
+  }
+  
+  .gallery-heading {
+    font-size: 1.6rem;
+  }
+  
+  .gallery-heading2 {
+    font-size: 1.2rem;
+  }
+}

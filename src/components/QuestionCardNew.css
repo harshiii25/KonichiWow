@@ -1,0 +1,128 @@
+.question-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.question-box {
+  background: beige;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.question-text {
+  font-size: 1.5rem !important;
+  color: black;
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.option-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.option-item:hover {
+  transform: translateY(-5px);
+}
+
+.option-item.selected {
+  background: rgba(38, 236, 180, 0.1);
+  outline: 2px solid #26ECB4;
+}
+
+.option-item.correct {
+  background: rgba(38, 236, 180, 0.2);
+  outline: 2px solid #26ECB4;
+}
+
+.option-item.incorrect {
+  background: rgba(236, 38, 95, 0.2);
+  outline: 2px solid #EC265F;
+}
+
+.option-text {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+}
+
+.feedback {
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+  background: beige;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feedback-correct {
+  color: #26ECB4;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.feedback-incorrect {
+  color: #EC265F;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.explanation {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #26ECB4;
+  color: white;
+}
+
+.feedback-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .question-container {
+    padding: 1rem;
+  }
+  
+  .question-box {
+    padding: 1.5rem;
+  }
+  
+  .tilted-card-figure {
+    width: 150px;
+    height: 150px;
+  }
+}
